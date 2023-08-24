@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Ethnic - Detail Produk</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="style/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Halaman Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light navbar-store fixed-top navbar-fixed-top"
+      data-aos="fade-down"
+    >
+      <div class="container">
+        <a href="/index.html" class="navbar-brand">
+          <img src="/images/logo.svg" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <!-- Menu Sarangwayang -->
+            <li class="nav-item">
+              <a href="/index.html" class="nav-link">Beranda</a>
+            </li>
+
+            <!-- Menu Kategori -->
+            <li class="nav-item">
+              <a href="/categories.html" class="nav-link">Kategori</a>
+            </li>
+          </ul>
+
+          <!-- Tampilan Menu Dekstop -->
+          <ul class="navbar-nav d-none d-lg-flex">
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+              >
+                <img
+                  src="/images/icon-user.png"
+                  alt=""
+                  class="rounded-circle mr-2 profile-picture"
+                />
+                Hai, Alam Yuliyon
+              </a>
+              <div class="dropdown-menu">
+                <a href="/dashboard.html" class="dropdown-item">Beranda</a>
+                <a href="/dashboard-account.html" class="dropdown-item"
+                  >Pengaturan</a
+                >
+                <div class="dropdown-divider"></div>
+                <a href="/" class="dropdown-item">Keluar</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link d-inline-block mt-2">
+                <img src="/images/icon-cart-empty.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+
+          <!-- Tampilan Menu Mobile -->
+          <ul class="navbar-nav d-block d-lg-none">
+            <li class="nav-item">
+              <a href="#" class="nav-link"> Hai, Alam Yuliyon </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link d-inline-block"> Keranjang </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Halaman Konten -->
+    <div class="page-content page-details">
+      <!-- Menu Navigasi Konten -->
+      <section
+        class="store-breadcrumbs"
+        data-aos="fade-right"
+        data-aos-delay="100"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="/index.html">Beranda</a>
+                  </li>
+                  <li class="breadcrumb-item active">Detail Produk</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Menu Konten Galeri Detail Produk -->
+      <section class="store-gallery" id="gallery">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8" data-aos="zoom-in">
+              <!-- Transisi vue js -->
+              <transition name="slide-fade" mode="out-in">
+                <img
+                  :src="photos[activePhoto].url"
+                  :key="photos[activePhoto].id"
+                  class="w-100 main-image"
+                  alt=""
+                />
+              </transition>
+            </div>
+            <div class="col-lg-2">
+              <div class="row">
+                <div
+                  class="col-3 col-lg-12 mt-2 mt-lg-0"
+                  v-for="(photo, index) in photos"
+                  :key="photo.id"
+                  data-aos="zoom-in"
+                  data-aos-delay="100"
+                >
+                  <a href="#" @click="changeActive(index)">
+                    <img
+                      :src="photo.url"
+                      class="w-100 thumbnail-image"
+                      :class="{active: index == activePhoto}"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Menu Konten Deskripsi Detail produk -->
+      <div class="store-details-container" data-aos="fade-up">
+        <!-- Menu Judul Konten Detail Produk-->
+        <section class="store-heading">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8">
+                <h1>Keris</h1>
+                <div class="owner">Alam Yuliyon</div>
+                <div class="price">Rp 5300000</div>
+              </div>
+              <div class="col-lg-2" data-aos="zoom-in">
+                <a
+                  href="/cart.html"
+                  class="btn btn-warning px-4 text-dark btn-block mb-3"
+                >
+                  Keranjang
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Menu Konten Deskripsi Detail Produk -->
+        <section class="store-description">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-8">
+                <p>
+                  Lorem ipsum dolor sit amet. Est numquam aliquam qui placeat
+                  molestias qui quasi voluptatem. Rem quia fugit 33 rerum
+                  numquam sed eaque illo.
+                </p>
+                <p>
+                  Qui doloremque iure ut fuga doloremque est dolor molestiae quo
+                  accusamus odio cum libero odit! Ea porro enim et dolor
+                  nesciunt sit ullam dignissimos et perspiciatis perspiciatis
+                  cum nulla aperiam sit explicabo corporis.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Menu Konten Komentar -->
+        <section class="store-review">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-8 mt-3 mb-3">
+                <h5>Komentar (3)</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-lg-8">
+                <ul class="list-unstyled">
+                  <!-- Komentar 1 -->
+                  <li class="media">
+                    <img
+                      src="/images/icon-testimonial-1.png"
+                      alt=""
+                      class="mr-3 rounded-circle"
+                    />
+                    <div class="media-body">
+                      <h5 class="mt-2 mb-1">Didik Ninik Thowok</h5>
+                      Lorem ipsum dolor sit amet. Est numquam aliquam qui
+                      placeat molestias qui quasi voluptatem.
+                    </div>
+                  </li>
+                  <!-- Komentar 2 -->
+                  <li class="media">
+                    <img
+                      src="/images/icon-testimonial-2.png"
+                      alt=""
+                      class="mr-3 rounded-circle"
+                    />
+                    <div class="media-body">
+                      <h5 class="mt-2 mb-1">I Nyoman Nuarta</h5>
+                      Lorem ipsum dolor sit amet. Est numquam aliquam qui
+                      placeat molestias qui quasi voluptatem.
+                    </div>
+                  </li>
+                  <!-- Komentar 3 -->
+                  <li class="media">
+                    <img
+                      src="/images/icon-testimonial-3.png"
+                      alt=""
+                      class="mr-3 rounded-circle"
+                    />
+                    <div class="media-body">
+                      <h5 class="mt-2 mb-1">Sujiwo Tejo</h5>
+                      Lorem ipsum dolor sit amet. Est numquam aliquam qui
+                      placeat molestias qui quasi voluptatem.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Halaman Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="pt-4 pb-2">Hak Cipta &copy 2023 Ethnic</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/vendor/jquery/jquery.slim.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="/vendor/vue/vue.js"></script>
+    <script>
+      var gallery = new Vue({
+        el: "#gallery",
+        mounted() {
+          AOS.init();
+        },
+        data: {
+          activePhoto: 0,
+          photos: [
+            {
+              id: 1,
+              url: "/images/product-details-1.png",
+            },
+            {
+              id: 2,
+              url: "/images/product-details-2.png",
+            },
+            {
+              id: 3,
+              url: "/images/product-details-3.png",
+            },
+            {
+              id: 4,
+              url: "/images/product-details-4.png",
+            },
+          ],
+        },
+
+        methods: {
+          changeActive(id) {
+            this.activePhoto = id;
+          },
+        },
+      });
+    </script>
+    <script src="/script/navbar-scroll.js"></script>
+  </body>
+</html>

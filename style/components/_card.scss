@@ -1,0 +1,19 @@
+.card {
+  background: #fefefe;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none !important;
+
+  .dashboard-card-title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #594745;
+  }
+  .dashboard-card-subtitle {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 48px;
+    color: #332317;
+  }
+}

@@ -1,0 +1,28 @@
+.page-success {
+  .row-login {
+    min-height: 75vh; // Jarak antara atas sampai bawah dalam sebuah browser
+  }
+  .section-success {
+    h2 {
+      font-weight: 400;
+      font-size: 28px;
+      margin-top: 0;
+      color: #332317;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      color: #594745;
+    }
+
+    .btn-warning {
+      color: #332317;
+    }
+
+    .btn-signup {
+      @include button-variant(#f3f3f3, transparent);
+      color: #bbbbbb;
+    }
+  }
+}
